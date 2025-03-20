@@ -56,6 +56,7 @@ img {
     display: flex;
     justify-content: center;
     padding: 20px;
+    gap: 20px;
 }
 
 button {
@@ -78,7 +79,6 @@ button {
     color: #ffffff;
     width: 200px;
     height: 50px;
-    margin-right: 10px;
 }
 
 .mac-btn:hover {
@@ -102,7 +102,6 @@ button {
     color: #1d92ff;
     width: 200px;
     height: 50px;
-    margin-left: 10px;
 }
 
 .win-btn:hover {
@@ -127,7 +126,7 @@ button {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: #ffffff;
+    color: #dbdbdb;
     font-family: Arial, sans-serif;
     text-align: center;
     font-size: 15px 
@@ -140,11 +139,48 @@ button {
 }
 
 .github-link {
-    color: #81b6fe;
+    color: #dbdbdb;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .github-link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack elements */
+        padding: 20px; /* Reduce padding */
+        justify-content: flex-start;
+    }
+
+    h1 {
+        font-size: 50px; /* Reduce title size */
+    }
+    
+    img {
+        max-width: 90%; /* Prevent image from overflowing */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center image */
+
+    }
+
+    .downloadButtons {
+        flex-direction: column; /* Stack buttons */
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .mac-btn, .win-btn {
+        width: 80%; /* Make buttons full width */
+        max-width: 250px;
+    }
+
+    .container, .container2 {
+        padding: 10px; /* Reduce padding */
+    }
+    
+    .footer p {
+        font-size: 13px; /* Reduce footer text size */
+    }
 }
