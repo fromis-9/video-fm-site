@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,19 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="img/vfm_64.png" type="image/png">
 </head>
+
 <body>
     <div class="container">
         <h1>video.fm</h1>
         <p>Visualize your Last.fm music history</p>
         <div class="downloadButtons">
-            <a href="https://github.com/fromis-9/video-fm/releases/download/v0.5.2-beta-mac/video.fm-0.5.2-arm64.dmg" class="mac-btn" download>
+            <a href="https://github.com/fromis-9/video-fm/releases/download/v0.5.2-beta-mac/video.fm-0.5.2-arm64.dmg"
+                class="mac-btn" download>
                 <img src="img/macos.png" alt="Apple logo" class="logo">
                 macOS
             </a>
-            <a href="https://github.com/fromis-9/video-fm/releases/download/v0.5.1-beta-windows/video.fm.Setup.0.5.1.exe" class="win-btn" download>
+            <a href="https://github.com/fromis-9/video-fm/releases/download/v0.5.1-beta-windows/video.fm.Setup.0.5.1.exe"
+                class="win-btn" download>
                 <img src="img/windows.svg" alt="Windows logo" class="logo">
                 Windows (beta)
             </a>
@@ -24,14 +28,42 @@
         <p3>Choose your installation. Open source.</p3>
     </div>
     <div class="container2">
-        <img src="img/vfmappnelly.png" alt="video.fm app">
+        <img id="slideshow" src="img/vfmappnelly.png" alt="video.fm app">
     </div>
+    <script>
+        const images = [
+            "img/vfmappnelly.png",
+            "img/vfmdavichi.png",
+            "img/vfmlisaloeb.png",
+            "img/vfmradiohead.png"
+        ]
+
+        let currentIndex = 0;
+    const carouselImg = document.getElementById("slideshow");
+
+    setInterval(() => {
+        // Fade out
+        carouselImg.style.opacity = 0;
+
+        setTimeout(() => {
+            // Change the image
+            currentIndex = (currentIndex + 1) % images.length;
+            carouselImg.src = images[currentIndex];
+
+            // Fade in
+            carouselImg.style.opacity = 1;
+        }, 1000); // CSS transition duration
+    }, 10000); // change image every 10 seconds
+
+    </script>
 </body>
 <footer>
     <div class="footer">
-        <p>© 2025 fromis-9 <span class="separator">|</span> 
-            <a href="https://github.com/fromis-9/video-fm" target="_blank" rel="noopener noreferrer" class="github-link">GitHub</a>
+        <p>© 2025 fromis-9 <span class="separator">|</span>
+            <a href="https://github.com/fromis-9/video-fm" target="_blank" rel="noopener noreferrer"
+                class="github-link">GitHub</a>
         </p>
     </div>
 </footer>
+
 </html>

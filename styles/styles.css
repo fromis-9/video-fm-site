@@ -148,6 +148,11 @@ img {
     text-decoration: underline;
 }
 
+#slideshow {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
 @media (max-width: 768px) {
     body {
         flex-direction: column; /* Stack elements */
