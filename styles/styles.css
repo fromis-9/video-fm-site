@@ -11,7 +11,9 @@
 
 body {
     font-family: Arial, sans-serif; /* Optional */
-    background-color: #171717;
+    background: url('../img/vfmbgss.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /*background-color: #171717;*/
     color: #dbdbdb;
     line-height: 1.6;
     height: 100vh; /* Full screen height */
